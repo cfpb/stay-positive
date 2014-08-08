@@ -2,9 +2,6 @@
 
 [![NPM](https://nodei.co/npm/stay-positive.png?downloads=true)](https://nodei.co/npm/stay-positive/)
 
-[![browser support](https://ci.testling.com/cfpb/stay-positive.png)
-](https://ci.testling.com/cfpb/stay-positive)
-
 > Return 0 if the provided number is negative or optionally return the absolute value.
 
 ## Installation
