@@ -5,15 +5,9 @@
 [![browser support](https://ci.testling.com/cfpb/stay-positive.png)
 ](https://ci.testling.com/cfpb/stay-positive)
 
-> Return 0 if the provided number is negative.
+> Return 0 if the provided number is negative or optionally return the absolute value.
 
 ## Installation
-
-First install [node.js](http://nodejs.org/). Then:
-
-```sh
-npm install stay-positive --save
-```
 
 Grab the `dist/stay-positive.js` file and include it at the bottom of your page:
 
@@ -25,13 +19,18 @@ Or use [Browserify](http://browserify.org/):
 
 ```sh
 npm install stay-positive --save
+var stayPositive = require('stay-positive');
 ```
 
 ## Usage
 
 ```javascript
-var stay-positive = require('stay-positive');
-stay-positive.awesome(); // "awesome"
+stayPositive(-1234); // 0
+stayPositive(-1234.5678); // 0
+stayPositive(-1234, {abs: true}); // 1234
+stayPositive(-1234.5678, {abs: true}); // 1234.5678
+stayPositive(1234): // 1234
+stayPositive('Party time, yo.') // Party time, yo.
 ```
 
 ## Contributing

@@ -63,5 +63,14 @@ exports.stayPositive = {
     var func = function(){return 1234;};
     test.strictEqual(stayPositive(func), func, 'Functions should stay the same.');
     test.done();
-  }
+  },
+  'absolutes': function(test) {
+    test.expect(5);
+    test.equal(stayPositive(-1234, {abs: true}), 1234, 'Flip the sign.');
+    test.equal(stayPositive(-1234.5678, {abs: true}), 1234.5678, 'Flip the sign.');
+    test.equal(stayPositive(1234, {abs: true}), 1234, 'Keep the sign');
+    test.equal(stayPositive(0, {abs: true}), 0, 'Zero is zero.');
+    test.equal(stayPositive('Party time, yo.', {abs: true}), 'Party time, yo.', 'Strings should stay the same.');
+    test.done();
+  },
 };
