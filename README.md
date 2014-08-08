@@ -6,22 +6,15 @@
 
 ## Installation
 
-Grab the `dist/stay-positive.js` file and include it at the bottom of your page:
-
-```html
-<script src="stay-positive.js"></script>
-```
-
-Or use [Browserify](http://browserify.org/):
-
 ```sh
 npm install stay-positive --save
-var stayPositive = require('stay-positive');
 ```
 
 ## Usage
 
 ```javascript
+var stayPositive = require('stay-positive');
+
 stayPositive(-1234); // 0
 stayPositive(-1234.5678); // 0
 stayPositive(-1234, {abs: true}); // 1234
