@@ -1,6 +1,6 @@
 {
   "name": "stay-positive",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "main": "index.js",
   "description": "Return 0 if the provided number is negative or optionally return the absolute value.",
   "homepage": "https://github.com/cfpb/stay-positive",
