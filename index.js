@@ -8,5 +8,5 @@
 
 module.exports = function( num, opts ) {
   num = opts && opts.abs && !isNaN( num ) ? Math.abs( num ) : num;
-  return parseFloat( num ) < 0 ? 0 : num;
+  return parseFloat( num ) <= 0 ? 0 : num;
 };

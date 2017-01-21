@@ -73,4 +73,9 @@ exports.stayPositive = {
     test.equal(stayPositive('Party time, yo.', {abs: true}), 'Party time, yo.', 'Strings should stay the same.');
     test.done();
   },
+  'negative zero': function(test) {
+    test.expect(1);
+    test.equal(1 / stayPositive(0), Infinity, 'Negative 0 should return positive 0.');
+    test.done();
+  },
 };
